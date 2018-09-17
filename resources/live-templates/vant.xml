@@ -1,0 +1,2149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templateSet group="vant">
+    <template name="van-row"
+              value="&lt;van-row&gt;&#xa; &lt;van-col span=&quot;$span$&quot;&gt;$content$&lt;/van-col&gt;&#xa;&lt;/van-row&gt;"
+              description="Vant Quickly and easily create layouts with van-row and van-col"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="span"
+                  expression="Number of column the grid spans"
+                  defaultValue="&quot;6&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content" defaultValue="content" alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-badge-group"
+              value="&lt;van-badge-group active-key=&quot;$activeKey$&quot;&gt;&#xa; &lt;van-badge title=&quot;$title$&quot; info=&quot;$info$&quot;&gt;&lt;/van-badge&gt;&#xa;&lt;/van-badge-group&gt;"
+              description="Vant Badge"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="activeKey" expression="Index of chosen badge"
+                  defaultValue="&quot;0&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Content"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="info" expression="Info Message"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-button"
+              value="&lt;van-button type=&quot;$type$&quot; :loading=&quot;$loading$&quot; @click=&quot;$click$&quot;&gt;&#xa;$content$&lt;/van-button&gt;"
+              description="Vant Button"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="type" expression="Can be set to primary warning danger"
+                  defaultValue="&quot;default&quot;"
+                  alwaysStopAt="true" />
+        <variable name="loading"
+                  expression="Whether show loading status"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click"
+                  expression="Triggered when click button and not disabled or loading"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content" defaultValue="content" alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-cell-group"
+              value="&lt;van-cell-group&gt;&#xa;&lt;van-cell title=&quot;$title$&quot; value=&quot;$value$&quot; label=&quot;$label$&quot; @click=&quot;$click$&quot;&gt;&lt;/van-cell&gt;&#xa;&lt;/van-cell-group&gt;"
+              description="Vant Cell"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="value" expression="Right text"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="label" expression="Description below the title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click" expression="Triggered when click cell"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-cell"
+              value="&lt;van-cell title=&quot;$title$&quot; value=&quot;$value$&quot; label=&quot;$label$&quot; @click=&quot;$click$&quot;&gt;&lt;/van-cell&gt;"
+              description="Vant Cell"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="value" expression="Right text"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="label" expression="Description below the title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click" expression="Triggered when click cell"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-circle"
+              value="&lt;van-circle v-model=&quot;$vModel$&quot;&#xa; color=&quot;$color$&quot;&#xa; fill=&quot;$fill$&quot;&#xa; size=&quot;$size$&quot;&#xa; layer-color=&quot;$layerColor$&quot;&#xa; :text=&quot;$text$&quot;&#xa; :rate=&quot;$rate$&quot;&#xa; :speed=&quot;$speed$&quot;&#xa; :clockwise=&quot;$clockwise$&quot;&#xa; :stroke-width=&quot;$strokeWidth$&quot;&gt;&#xa;&lt;/van-circle&gt;"
+              description="Vant Circle"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current rate"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="color" expression="Progress bar color"
+                  defaultValue="&quot;#13ce66&quot;"
+                  alwaysStopAt="true" />
+        <variable name="fill" expression="Fill color"
+                  defaultValue="&quot;#fff&quot;"
+                  alwaysStopAt="true" />
+        <variable name="size" expression="Circle size"
+                  defaultValue="&quot;120px&quot;"
+                  alwaysStopAt="true" />
+        <variable name="layerColor" expression="Layer color"
+                  defaultValue="&quot;#eee&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text" expression="Text"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="rate" expression="Target rate"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="speed" expression="Animate speed（rate/s）"
+                  defaultValue="&quot;100&quot;"
+                  alwaysStopAt="true" />
+        <variable name="clockwise" expression="Is clockwise"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="strokeWidth" expression="Stroke width"
+                  defaultValue="&quot;60&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-collapse"
+              value="&lt;van-collapse v-model=&quot;$vModel$&quot;&gt;&#xa; &lt;van-collapse-item title=&quot;$title$&quot; name=&quot;$name$&quot;&gt;$content$&lt;/van-collapse-item&gt;&#xa;&lt;/van-collapse&gt;"
+              description="Vant Collapse"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="names of current active panels"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Name"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue=""
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-icon"
+              value="&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;"
+              description="Vant Icon"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="name" expression="Icon name"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-list"
+              value="&lt;van-list v-model=&quot;$vModel$&quot; :finished=&quot;$finished$&quot; @load=&quot;$load$&quot;&gt;&#xa;&lt;van-cell v-for=&quot;$vFor$&quot; :key=&quot;$key$&quot; :title=&quot;$title$&quot;&gt;&lt;/van-cell&gt;&#xa;&lt;/van-list&gt;"
+              description="A list component to show items and control loading status."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Whether to show loading info，the load event will not be triggered when loading"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="finished" expression="Whether loading is finished，the load event will not be triggered when finished"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="load" expression="Triggered when the distance between the scrollbar and the bottom is less than offset"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vFor" expression="List item array"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="key" expression="v-for key"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-loading"
+              value="&lt;van-loading color=&quot;$color$&quot; type=&quot;$type$&quot;&gt;&lt;/van-loading&gt;"
+              description="Vant Loading"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="color" expression="Can be set to white"
+                  defaultValue="&quot;black&quot;"
+                  alwaysStopAt="true" />
+        <variable name="type" expression="Can be set to spinner"
+                  defaultValue="&quot;circular&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-nav-bar"
+              value="&lt;van-nav-bar title=&quot;$title$&quot; left-text=&quot;$leftText$&quot; right-text=&quot;$rightText$&quot; :left-arrow=&quot;$leftArrow$&quot; :fixed=&quot;$fixed$&quot; @click-left=&quot;$clickLeft$&quot; @click-right=&quot;$clickRight$&quot;&gt;&lt;/van-nav-bar&gt;"
+              description="Vant NavBar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="leftText" expression="Left Text"
+                  defaultValue="&quot;Back&quot;"
+                  alwaysStopAt="true" />
+        <variable name="rightText" expression="Right Text"
+                  defaultValue="&quot;Button&quot;"
+                  alwaysStopAt="true" />
+        <variable name="leftArrow" expression="Whether to show left arrow"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="fixed" expression="Whether to fixed top"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="clickLeft" expression="Triggered when click left button"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="clickRight" expression="Triggered when click right button"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-notice-bar"
+              value="&lt;van-notice-bar text=&quot;$text$&quot; :scrollable=&quot;$scrollable$&quot; mode=&quot;$mode$&quot;&gt;$content$&lt;/van-nav-bar&gt;"
+              description="Vant NoticeBar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="text" expression="Notice Content"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="scrollable" expression="Whether to scroll content"
+                  defaultValue="&quot;true&quot;"
+                  alwaysStopAt="true" />
+        <variable name="mode" expression="Mode, can be set to closeable link"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue=""
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-pagination"
+              value="&lt;van-pagination v-model=&quot;$vModel$&quot; :total-items=&quot;$totalItems$&quot; :items-per-page=&quot;$itemsPerPage$&quot; mode=&quot;$mode$&quot; show-page-size=&quot;$showPageSize$&quot; :force-ellipses=&quot;$forceEllipses$&quot; prev-text=&quot;$prevText$&quot; next-text=&quot;$nextText$&quot; @change=&quot;$change$&quot;&gt;&lt;/van-pagination&gt;"
+              description="Vant Pagination"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current page number"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="totalItems" expression="total items"
+                  defaultValue="&quot;100&quot;"
+                  alwaysStopAt="true" />
+        <variable name="itemsPerPage" expression="Item number per page"
+                  defaultValue="&quot;10&quot;"
+                  alwaysStopAt="true" />
+        <variable name="mode" expression="Mode, can be set to simple multi"
+                  defaultValue="&quot;multi&quot;"
+                  alwaysStopAt="true" />
+        <variable name="showPageSize" expression="Count of page size to show"
+                  defaultValue="&quot;5&quot;"
+                  alwaysStopAt="true" />
+        <variable name="forceEllipses" expression="Whether to show ellipses"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="prevText" expression="Previous text"
+                  defaultValue="&quot;Previous&quot;"
+                  alwaysStopAt="true" />
+        <variable name="nextText" expression="Next text"
+                  defaultValue="&quot;Next&quot;"
+                  alwaysStopAt="true" />
+        <variable name="change" expression="Triggered on page change"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-panel"
+              value="&lt;van-panel title=&quot;$title$&quot; desc=&quot;$desc$&quot; status=&quot;$status$&quot;&gt;&#xa;&lt;div&gt;$content$&lt;/div&gt;&#xa;&lt;/van-panel&gt;"
+              description="Vant Panel"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="desc" expression="Description"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="status" expression="Status"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue=""
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-popup"
+              value="&lt;van-popup v-model=&quot;$vModel$&quot; position=&quot;$position$&quot;&gt;$content$&lt;/van-popup&gt;"
+              description="Vant Panel"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Whether to show popup"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="position" expression="Can be set to top bottom right left	"
+                  defaultValue="&quot;top&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue=""
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-progress"
+              value="&lt;van-progress :percentage=&quot;$percentage$&quot;&gt;&lt;/van-progress&gt;"
+              description="Vant Progress"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="percentage" expression="Percentage"
+                  defaultValue="&quot;50&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-steps"
+              value="&lt;van-steps :active=&quot;$active$&quot; icon=&quot;$icon$&quot; title=&quot;$title$&quot; description=&quot;$description$&quot;&gt;&#xa;&lt;van-step&gt;$step1$&lt;/van-step&gt;&#xa;&lt;van-step&gt;$step2$&lt;/van-step&gt;&#xa;&lt;van-step&gt;$step3$&lt;/van-step&gt;&#xa;&lt;van-step&gt;$step4$&lt;/van-step&gt;&#xa;&lt;/van-steps&gt;"
+              description="Vant Steps"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="active" expression="Active step"
+                  defaultValue="&quot;0&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon" expression="	Action step icon"
+                  defaultValue="&quot;logistics&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="description" expression="Description"
+                  defaultValue="&quot;Description&quot;"
+                  alwaysStopAt="true" />
+        <variable name="step1" expression="step1"
+                  defaultValue="&quot;Step1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="step2" expression="step2"
+                  defaultValue="&quot;Step2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="step3" expression="step3"
+                  defaultValue="&quot;Step3&quot;"
+                  alwaysStopAt="true" />
+        <variable name="step4" expression="step4"
+                  defaultValue="&quot;Step4&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-swipe"
+              value="&lt;van-swipe :autoplay=&quot;$autoplay$&quot;&gt;&#xa;&lt;van-swipe-item&gt;$item1$&lt;/van-swipe-item&gt;&#xa;&lt;van-swipe-item&gt;$item2$&lt;/van-swipe-item&gt;&#xa;&lt;van-swipe-item&gt;$item3$&lt;/van-swipe-item&gt;&#xa;&lt;van-swipe-item&gt;$item4$&lt;/van-swipe-item&gt;&#xa;&lt;/van-swipe&gt;"
+              description="Vant Swipe"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="autoplay" expression="Autoplay interval (ms)"
+                  defaultValue="&quot;3000&quot;"
+                  alwaysStopAt="true" />
+        <variable name="item1" expression="item1"
+                  defaultValue="&quot;1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="item2" expression="item2"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="item3" expression="item3"
+                  defaultValue="&quot;3&quot;"
+                  alwaysStopAt="true" />
+        <variable name="item4" expression="item4"
+                  defaultValue="&quot;4&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-tab"
+              value="&lt;van-tabs v-model=&quot;$vModel$&quot;&gt;&#xa;&lt;van-tab v-for=&quot;$vFor$&quot; :key=&quot;$key$&quot; :title=&quot;$title$&quot;&gt;$content$&lt;/van-tab&gt;&#xa;&lt;/van-tabs&gt;"
+              description="Vant Tabbar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Index of active tab"
+                  defaultValue="&quot;0&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vFor" expression="tab item"
+                  defaultValue="&quot;index in 4&quot;"
+                  alwaysStopAt="true" />
+        <variable name="key" expression="key"
+                  defaultValue="&quot;index&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;'tab ' + index&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="&quot;content {{ index }}&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-tabbar"
+              value="&lt;van-tabbar v-model=&quot;$vModel$&quot;&gt;&#xa;&lt;van-tabbar-item icon=&quot;$icon1$&quot;&gt;$content$&lt;/van-tabbar-item&gt;&#xa;&lt;van-tabbar-item icon=&quot;$icon2$&quot; dot&gt;$content$&lt;/van-tabbar-item&gt;&#xa;&lt;van-tabbar-item icon=&quot;$icon3$&quot; info=&quot;$info1$&quot;&gt;$content$&lt;/van-tabbar-item&gt;&#xa;&lt;van-tabbar-item icon=&quot;$icon4$&quot; info=&quot;$info2$&quot;&gt;$content$&lt;/van-tabbar-item&gt;&#xa;&lt;/van-tabbar&gt;"
+              description="Vant Tabbar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Index of current tab"
+                  defaultValue="&quot;3000&quot;"
+                  alwaysStopAt="true" />
+        <variable name="info1" expression="Info message"
+                  defaultValue="&quot;5&quot;"
+                  alwaysStopAt="true" />
+        <variable name="info2" expression="Info message"
+                  defaultValue="&quot;20&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon1" expression="Icon name"
+                  defaultValue="&quot;shop&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon2" expression="Icon name"
+                  defaultValue="&quot;chat&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon3" expression="Icon name"
+                  defaultValue="&quot;records&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon4" expression="Icon name"
+                  defaultValue="&quot;gold-coin&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="Tab"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-tag"
+              value="&lt;van-tag type=&quot;$type$&quot; :mark=&quot;$mark$&quot; :plain=&quot;$plain$&quot;&gt;$content$&lt;/van-tag&gt;"
+              description="Vant Tag"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="type" expression="Type, can be set to primary success danger"
+                  defaultValue="&quot;50&quot;"
+                  alwaysStopAt="true" />
+        <variable name="plain" expression="Whether to be plain style"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="mark" expression="Wtether to be mark style"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="Tag"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-checkbox"
+              value="&lt;van-checkbox v-model=&quot;$vModel$&quot; name=&quot;$name$&quot;&gt;$content$&lt;/van-checkbox&gt;"
+              description="Vant Checkbox"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Check status"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Checkbox name"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="Checkbox"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-checkbox-group"
+              value="&lt;van-checkbox-group v-model=&quot;$vModel$&quot;&gt;&#xa;&lt;van-checkbox v-for=&quot;$vFor$&quot; :key=&quot;$key$&quot; :title=&quot;$title$&quot;&gt;$content$&lt;/van-checkbox&gt;&#xa;&lt;/van-checkbox-group&gt;"
+              description="Vant Checkbox Group"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Names of all checked checkboxes"
+                  defaultValue="&quot;result&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vFor" expression="checkbox item"
+                  defaultValue="&quot;(item, index) in ['a', 'b', 'c']&quot;"
+                  alwaysStopAt="true" />
+        <variable name="key" expression="key"
+                  defaultValue="&quot;index&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Checkbox name"
+                  defaultValue="&quot;item&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="&quot;Checkbox {{ item }}&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-field"
+              value="&lt;van-field v-model=&quot;$vModel$&quot; placeholder=&quot;$placeholder$&quot;&gt;$content$&lt;/van-field&gt;"
+              description="Vant Checkbox"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Check status"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Checkbox name"
+                  defaultValue="&quot;&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="Checkbox"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-number-keyboard"
+              value="&lt;van-number-keyboard :show=&quot;$show$&quot; theme=&quot;$theme$&quot; extra-key=&quot;$extraKey$&quot; close-button-text=&quot;$closeButtonText$&quot; @blur=&quot;$blur$&quot; @input=&quot;$input$&quot; @delete=&quot;$delete$&quot;&gt;&lt;/van-number-keyboard&gt;"
+              description="Vant NumberKeyboard"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="show" expression="Whether to show keyboard"
+                  defaultValue="&quot;show&quot;"
+                  alwaysStopAt="true" />
+        <variable name="theme" expression="Keyboard theme，can be set to default custom"
+                  defaultValue="&quot;default&quot;"
+                  alwaysStopAt="true" />
+        <variable name="extraKey" expression="Content of bottom left key"
+                  defaultValue="&quot;.&quot;"
+                  alwaysStopAt="true" />
+        <variable name="closeButtonText" expression="Close button text"
+                  defaultValue="&quot;Close&quot;"
+                  alwaysStopAt="true" />
+        <variable name="blur" expression="Triggered when click close button or blur keyboard"
+                  defaultValue="&quot;show = false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="input" expression="Triggered when keydown"
+                  defaultValue="&quot;onInput&quot;"
+                  alwaysStopAt="true" />
+        <variable name="delete" expression="Triggered when press delete key"
+                  defaultValue="&quot;onDelete&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-password-input"
+              value="&lt;van-password-input :value=&quot;$value$&quot; info=&quot;$info$&quot; @focus=&quot;$focus$&quot;&gt;&lt;/van-password-input&gt;&#xa;&lt;van-number-keyboard :show=&quot;$show$&quot; @input=&quot;$input$&quot; @delete=&quot;$delete$&quot; @blur=&quot;$blur$&quot;&gt;&lt;/van-number-keyboard&gt;"
+              description="The PasswordInput component is usually used with NumberKeyboard Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="value" expression="Password value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="info" expression="Bottom info"
+                  defaultValue="&quot;Some tips&quot;"
+                  alwaysStopAt="true" />
+        <variable name="focus" expression="Triggered when input get focused"
+                  defaultValue="&quot;showKeyboard = true&quot;"
+                  alwaysStopAt="true" />
+        <variable name="show" expression="Whether to show keyboard"
+                  defaultValue="&quot;showKeyboard&quot;"
+                  alwaysStopAt="true" />
+        <variable name="blur" expression="Triggered when click close button or blur keyboard"
+                  defaultValue="&quot;showKeyboard = false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="input" expression="Triggered when keydown"
+                  defaultValue="&quot;onInput&quot;"
+                  alwaysStopAt="true" />
+        <variable name="delete" expression="Triggered when press delete key"
+                  defaultValue="&quot;onDelete&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-radio-group"
+              value="&lt;van-radio-group v-model=&quot;$vModel$&quot;&gt;&#xa;&lt;van-radio name=&quot;$name1$&quot;&gt;$content1$&lt;/van-radio&gt;&#xa;&lt;van-radio name=&quot;$name2$&quot;&gt;$content2$&lt;/van-radio&gt;&#xa;&lt;/van-radio-group&gt;"
+              description="Vant Radio Group"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Name of checked radio"
+                  defaultValue="&quot;radio&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name1" expression="Radio name"
+                  defaultValue="&quot;1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content1" expression="key"
+                  defaultValue="&quot;Radio 1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name2" expression="Radio name"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content2" expression="content"
+                  defaultValue="&quot;Radio 2&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-radio"
+              value="&lt;van-radio name=&quot;$name$&quot;&gt;$content$&lt;/van-radio&gt;"
+              description="Vant Radio Group"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="name" expression="Radio name"
+                  defaultValue="&quot;1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="key"
+                  defaultValue="&quot;Radio 1&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-radio-group:cell"
+              value="&lt;van-radio-group v-model=&quot;$vModel$&quot;&gt;&#xa;&lt;van-cell-group&gt;&#xa;&lt;van-cell title=&quot;$title1$&quot; clickable @click=&quot;$click1$&quot;&gt;&#xa;&lt;van-radio name=&quot;$name1$&quot;&gt;&lt;/van-radio&gt;&#xa;&lt;/van-cell&gt;&#xa;&lt;van-cell title=&quot;$title2$&quot; clickable @click=&quot;$click2$&quot;&gt;&#xa;&lt;van-radio name=&quot;$name2$&quot;&gt;&lt;/van-radio&gt;&#xa;&lt;/van-cell&gt;&#xa;&lt;/van-cell-group&gt;&#xa;&lt;/van-radio-group&gt;"
+              description="Vant Radio Group"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Name of checked radio"
+                  defaultValue="&quot;radio&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name1" expression="Radio name"
+                  defaultValue="&quot;1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title1" expression="key"
+                  defaultValue="&quot;Radio 1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click1" expression="key"
+                  defaultValue="&quot;radio = '1'&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name2" expression="Radio name"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title2" expression="content"
+                  defaultValue="&quot;Radio 2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click2" expression="content"
+                  defaultValue="&quot;radio = '2'&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-rate"
+              value="&lt;van-rate v-model=&quot;$vModel$&quot; :size=&quot;$size$&quot; :count=&quot;$count$&quot; color=&quot;$color$&quot; void-color=&quot;$voidColor$&quot;&gt;&lt;/van-rate&gt;"
+              description="Vant Rate"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current rate"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="size" expression="Icon size (px)"
+                  defaultValue="&quot;25&quot;"
+                  alwaysStopAt="true" />
+        <variable name="count" expression="Count"
+                  defaultValue="&quot;6&quot;"
+                  alwaysStopAt="true" />
+        <variable name="color" expression="Selected color"
+                  defaultValue="&quot;#2ba&quot;"
+                  alwaysStopAt="true" />
+        <variable name="voidColor" expression="Void color"
+                  defaultValue="&quot;#ceefe8&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-search"
+              value="&lt;van-search v-model=&quot;$vModel$&quot; placeholder=&quot;$placeholder$&quot;&gt;&lt;/van-search&gt;"
+              description="Vant Search"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Search Content"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="placeholder" expression="Input placeholder"
+                  defaultValue="&quot;Placeholder&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-search:form"
+              value="&lt;form action=&quot;$action$&quot;&gt;&#xa;&lt;van-search v-model=&quot;$vModel$&quot; placeholder=&quot;$placeholder$&quot; show-action @search=&quot;$search$&quot; @cancel=&quot;$cancel$&quot;&gt;&lt;/van-search&gt;&#xa;&lt;/form&gt;"
+              description="Vant Search Listen to Events"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="action" expression="Search form action url"
+                  defaultValue="&quot;/&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vModel" expression="Search Content"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="placeholder" expression="Input placeholder"
+                  defaultValue="&quot;Placeholder&quot;"
+                  alwaysStopAt="true" />
+        <variable name="search" expression="Triggered when confirm search"
+                  defaultValue="&quot;onSearch&quot;"
+                  alwaysStopAt="true" />
+        <variable name="cancel" expression="Triggered when click cancel button"
+                  defaultValue="&quot;onCancel&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-slider"
+              value="&lt;van-slider v-model=&quot;$vModel$&quot; @change=&quot;$change$&quot;&gt;&lt;/van-slider&gt;"
+              description="Vant Slider"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="change" expression="Triggered after value change"
+                  defaultValue="&quot;onChange&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-slider:range"
+              value="&lt;van-slider v-model=&quot;$vModel$&quot; :min=&quot;$min$&quot; :max=&quot;$max$&quot;&gt;&lt;/van-slider&gt;"
+              description="Vant Slider Range"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="min" expression="Min value"
+                  defaultValue="&quot;10&quot;"
+                  alwaysStopAt="true" />
+        <variable name="max" expression="Max value"
+                  defaultValue="&quot;90&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-slider:disabled"
+              value="&lt;van-slider v-model=&quot;$vModel$&quot; disabled&gt;&lt;/van-slider&gt;"
+              description="Vant Slider Disabled"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-slider:step"
+              value="&lt;van-slider v-model=&quot;$vModel$&quot; :step=&quot;$step$&quot; bar-height=&quot;$barHeight$&quot;&gt;&lt;/van-slider&gt;"
+              description="Vant Slider Step size"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="step" expression="Step size"
+                  defaultValue="&quot;10&quot;"
+                  alwaysStopAt="true" />
+        <variable name="barHeight" expression="Height of bar"
+                  defaultValue="&quot;4px&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-stepper"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot;&gt;&lt;/van-stepper&gt;"
+              description="Vant Stepper"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-stepper:disabled"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot; disabled&gt;&lt;/van-stepper&gt;"
+              description="Vant Stepper Disabled"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-stepper:advanced"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot; integer :min=&quot;$min$&quot; :max=&quot;$max$&quot; :step=&quot;$step$&quot; :default-value=&quot;$defaultValue$&quot;&gt;&lt;/van-stepper&gt;"
+              description="Vant Stepper Advanced Usage"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Current value"
+                  defaultValue="&quot;value&quot;"
+                  alwaysStopAt="true" />
+        <variable name="min" expression="Min value"
+                  defaultValue="&quot;5&quot;"
+                  alwaysStopAt="true" />
+        <variable name="max" expression="Max value"
+                  defaultValue="&quot;40&quot;"
+                  alwaysStopAt="true" />
+        <variable name="step" expression="Value change step"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="defaultValue" expression="Default value"
+                  defaultValue="&quot;9&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-switch"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot;&gt;&lt;/van-switch&gt;"
+              description="Vant Switch"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Check status of Switch"
+                  defaultValue="&quot;checked&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-switch:disabled"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot; disabled&gt;&lt;/van-switch&gt;"
+              description="Vant Switch Disabled"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Check status of Switch"
+                  defaultValue="&quot;checked&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-switch:disabled"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot; loading&gt;&lt;/van-switch&gt;"
+              description="Vant Switch Loading"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Check status of Switch"
+                  defaultValue="&quot;checked&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-switch:advanced"
+              value="&lt;van-stepper v-model=&quot;$vModel$&quot; size=&quot;$size$&quot; @input=&quot;$input$&quot;&gt;&lt;/van-switch&gt;"
+              description="Vant Switch Advanced usage"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Check status of Switch"
+                  defaultValue="&quot;checked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="size" expression="Size of switch"
+                  defaultValue="&quot;36px&quot;"
+                  alwaysStopAt="true" />
+        <variable name="input" expression="Triggered when keydown"
+                  defaultValue="&quot;onInput&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-uploader"
+              value="&lt;div class=&quot;uploader-container&quot;&gt;&#xa;&lt;van-uploader :after-read=&quot;$afterRead$&quot;&gt;&#xa;&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;&#xa;&lt;/van-upload&gt;&#xa;&lt;/div&gt;"
+              description="Vant Uploader"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="afterRead" expression="Hook after reading the file"
+                  defaultValue="&quot;onRead&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Custom icon"
+                  defaultValue="&quot;photograph&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-uploader:attr"
+              value="&lt;van-uploader :after-read=&quot;$afterRead$&quot; accept=&quot;$accept$&quot; multiple&gt;&#xa;&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;&#xa;&lt;/van-upload&gt;"
+              description="Vant Uploader"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="afterRead" expression="Hook after reading the file"
+                  defaultValue="&quot;onRead&quot;"
+                  alwaysStopAt="true" />
+        <variable name="accept" expression="Accepted file type"
+                  defaultValue="&quot;image/gif, image/jpeg&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Custom icon"
+                  defaultValue="&quot;photograph&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-actionsheet"
+              value="&lt;van-actionsheet v-model=&quot;$vModel$&quot; :actions=&quot;$actions$&quot; @select=&quot;$select$&quot;&gt;&lt;/van-actionsheet&gt;"
+              description="Vant Actionsheet"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Whether show actionsheet"
+                  defaultValue="&quot;show&quot;"
+                  alwaysStopAt="true" />
+        <variable name="actions" expression="Options"
+                  defaultValue="&quot;actions&quot;"
+                  alwaysStopAt="true" />
+        <variable name="select" expression="Triggered when click option"
+                  defaultValue="&quot;onSelect&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-actionsheet:cancel"
+              value="&lt;van-actionsheet v-model=&quot;$vModel$&quot; :actions=&quot;$actions$&quot; cancel-text=&quot;$cancelText$&quot; @select=&quot;$select$&quot; @cancel=&quot;$cancel$&quot;&gt;&lt;/van-actionsheet&gt;"
+              description="Vant Actionsheet"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Whether show actionsheet"
+                  defaultValue="&quot;show&quot;"
+                  alwaysStopAt="true" />
+        <variable name="actions" expression="Options"
+                  defaultValue="&quot;actions&quot;"
+                  alwaysStopAt="true" />
+        <variable name="cancelText" expression="Text of cancel button"
+                  defaultValue="&quot;Cancel&quot;"
+                  alwaysStopAt="true" />
+        <variable name="select" expression="Triggered when click option"
+                  defaultValue="&quot;onSelect&quot;"
+                  alwaysStopAt="true" />
+        <variable name="cancel" expression="Triggered when cancel click"
+                  defaultValue="&quot;onCancel&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-actionsheet:title"
+              value="&lt;van-actionsheet v-model=&quot;$vModel$&quot; title=&quot;$title$&quot;&gt;&#xa;&lt;p&gt;$content$&lt;/p&gt;&#xa;&lt;/van-actionsheet&gt;"
+              description="Vant Actionsheet"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Whether show actionsheet"
+                  defaultValue="&quot;show&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="content" expression="content"
+                  defaultValue="Content"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-datetime-picker"
+              value="&lt;van-datetime-picker v-model=&quot;$vModel$&quot; type=&quot;$type$&quot; :min-date=&quot;$minDate$&quot; :max-date=&quot;$maxDate$&quot;&gt;&lt;/van-datetime-picker&gt;"
+              description="The DatetimePicker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="current date"
+                  defaultValue="&quot;currentDate&quot;"
+                  alwaysStopAt="true" />
+        <variable name="type" expression="Can be set to date, time, year-month"
+                  defaultValue="&quot;datetime&quot;"
+                  alwaysStopAt="true" />
+        <variable name="minDate" expression="Min date"
+                  defaultValue="&quot;minDate&quot;"
+                  alwaysStopAt="true" />
+        <variable name="maxDate" expression="Max date"
+                  defaultValue="&quot;maxDate&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-datetime-picker:date"
+              value="&lt;van-datetime-picker v-model=&quot;$vModel$&quot; type=&quot;$type$&quot; :min-date=&quot;$minDate$&quot;&gt;&lt;/van-datetime-picker&gt;"
+              description="The DatetimePicker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="current date"
+                  defaultValue="&quot;currentDate&quot;"
+                  alwaysStopAt="true" />
+        <variable name="type" expression="Can be set to date, time, year-month"
+                  defaultValue="&quot;date&quot;"
+                  alwaysStopAt="true" />
+        <variable name="minDate" expression="Min date"
+                  defaultValue="&quot;minDate&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-datetime-picker:year-month"
+              value="&lt;van-datetime-picker v-model=&quot;$vModel$&quot; type=&quot;$type$&quot; :min-date=&quot;$minDate$&quot; :formatter=&quot;$formatter$&quot;&gt;&lt;/van-datetime-picker&gt;"
+              description="The DatetimePicker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="current date"
+                  defaultValue="&quot;currentDate&quot;"
+                  alwaysStopAt="true" />
+        <variable name="type" expression="Can be set to date, time, year-month"
+                  defaultValue="&quot;year-month&quot;"
+                  alwaysStopAt="true" />
+        <variable name="minDate" expression="Min date"
+                  defaultValue="&quot;minDate&quot;"
+                  alwaysStopAt="true" />
+        <variable name="formatter" expression="Option text formatter"
+                  defaultValue="&quot;Function(type, value)&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-datetime-picker:time"
+              value="&lt;van-datetime-picker v-model=&quot;$vModel$&quot; type=&quot;$type$&quot; :min-hour=&quot;$minHour$&quot; :max-hour=&quot;$maxHour$&quot;&gt;&lt;/van-datetime-picker&gt;"
+              description="The DatetimePicker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="current date"
+                  defaultValue="&quot;currentDate&quot;"
+                  alwaysStopAt="true" />
+        <variable name="type" expression="Can be set to date, time, year-month"
+                  defaultValue="&quot;time&quot;"
+                  alwaysStopAt="true" />
+        <variable name="minHour" expression="Min hour for time type"
+                  defaultValue="&quot;minHour&quot;"
+                  alwaysStopAt="true" />
+        <variable name="maxHour" expression="Max hour for time type"
+                  defaultValue="&quot;maxHour&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-dialog:advanced"
+              value="&lt;van-dialog v-model=&quot;$vModel$&quot; show-cancel-button :before-close=&quot;$beforeClose$&quot;&gt;&#xa;&lt;van-field v-model=&quot;$vModel1$&quot; label=&quot;$label1$&quot; placeholder=&quot;$placeholder1$&quot;&gt;&lt;/van-field&gt;&#xa;&lt;van-field v-model=&quot;$vModel2$&quot; type=&quot;$type$&quot; label=&quot;$label2$&quot; placeholder=&quot;$placeholder2$&quot;&gt;&lt;/van-field&gt;&#xa;&lt;/van-dialog&gt;"
+              description="Vant Dialog"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Whether to show dialog"
+                  defaultValue="&quot;show&quot;"
+                  alwaysStopAt="true" />
+        <variable name="beforeClose" expression="Callback before close, call done() to close dialog, call done(false) to cancel loading"
+                  defaultValue="&quot;beforeClose&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vModel1" expression="Field value"
+                  defaultValue="&quot;username&quot;"
+                  alwaysStopAt="true" />
+        <variable name="label1" expression="Field label"
+                  defaultValue="&quot;Username&quot;"
+                  alwaysStopAt="true" />
+        <variable name="placeholder1" expression="Field placeholder"
+                  defaultValue="&quot;Username&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vModel2" expression="Field value"
+                  defaultValue="&quot;password&quot;"
+                  alwaysStopAt="true" />
+        <variable name="label2" expression="Field label"
+                  defaultValue="&quot;Password&quot;"
+                  alwaysStopAt="true" />
+        <variable name="placeholder2" expression="Field placeholder"
+                  defaultValue="&quot;Password&quot;"
+                  alwaysStopAt="true" />
+        <variable name="type" expression="Input type"
+                  defaultValue="&quot;password&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-picker"
+              value="&lt;van-picker :columns=&quot;$columns$&quot; @change=&quot;$change$&quot;&gt;&lt;/van-picker&gt;"
+              description="The Picker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="columns" expression="Columns data"
+                  defaultValue="&quot;columns&quot;"
+                  alwaysStopAt="true" />
+        <variable name="change" expression="Triggered when current option changed"
+                  defaultValue="&quot;onChange&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-picker:toolbar"
+              value="&lt;van-picker :show-toolbar=&quot;$showToolbar$&quot; title=&quot;$title$&quot; :columns=&quot;$columns$&quot; @cancel=&quot;$cancel$&quot; @confirm=&quot;$confirm$&quot;&gt;&lt;/van-picker&gt;"
+              description="The Picker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="columns" expression="Columns data"
+                  defaultValue="&quot;columns&quot;"
+                  alwaysStopAt="true" />
+        <variable name="showToolbar" expression="Whether to show toolbar"
+                  defaultValue="&quot;true&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Toolbar title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="cancel" expression="Triggered when click cancel button"
+                  defaultValue="&quot;onCancel&quot;"
+                  alwaysStopAt="true" />
+        <variable name="confirm" expression="Triggered when click confirm button"
+                  defaultValue="&quot;onConfirm&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-picker:loading"
+              value="&lt;van-picker :columns=&quot;$columns$&quot; :loading=&quot;$loading$&quot;&gt;&lt;/van-picker&gt;"
+              description="The Picker component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="columns" expression="Columns data"
+                  defaultValue="&quot;columns&quot;"
+                  alwaysStopAt="true" />
+        <variable name="loading" expression="Whether to show loading prompt"
+                  defaultValue="&quot;true&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-pull-refresh"
+              value="&lt;van-pull-refresh v-model=&quot;$vModel$&quot; @refresh=&quot;$refresh$&quot;&gt;&#xa;&lt;p&gt;Refresh Count: {{ count }}&lt;/p&gt;&#xa;&lt;/van-pull-refresh&gt;"
+              description="Vant PullRefresh"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Loading status"
+                  defaultValue="&quot;isLoading&quot;"
+                  alwaysStopAt="true" />
+        <variable name="refresh" expression="Triggered when pull refresh"
+                  defaultValue="&quot;onRefresh&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-swipe-cell"
+              value="&lt;van-swipe-cell :right-width=&quot;$rightWidth$&quot; :left-width=&quot;$leftWidth$&quot;&gt;&#xa;&lt;span slot=&quot;left&quot;&gt;$slotLeftContent$&lt;/span&gt;&#xa;&lt;van-cell-group&gt;&#xa;&lt;van-cell title=&quot;$title$&quot; value=&quot;$value$&quot;&gt;&lt;/van-cell&gt;&#xa;&lt;/van-cell-group&gt;&#xa;&lt;span slot=&quot;right&quot;&gt;$slotRightContent$&lt;/span&gt;&#xa;&lt;/van-swipe-cell&gt;"
+              description="Vant SwipeCell"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="rightWidth" expression="Width of the right scrollable area"
+                  defaultValue="&quot;65&quot;"
+                  alwaysStopAt="true" />
+        <variable name="leftWidth" expression="Width of the left scrollable area"
+                  defaultValue="&quot;65&quot;"
+                  alwaysStopAt="true" />
+        <variable name="slotLeftContent" expression="content of left scrollable area"
+                  defaultValue="&quot;Select&quot;"
+                  alwaysStopAt="true" />
+        <variable name="slotRightContent" expression="content of right scrollabe area"
+                  defaultValue="&quot;Delete&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Cell&quot;"
+                  alwaysStopAt="true" />
+        <variable name="value" expression="Right text"
+                  defaultValue="&quot;Cell Content&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-swipe-cell:async-close"
+              value="&lt;van-swipe-cell :right-width=&quot;$rightWidth$&quot; :left-width=&quot;$leftWidth$&quot; :on-close=&quot;$onClose$&quot;&gt;&#xa;&lt;span slot=&quot;left&quot;&gt;$slotLeftContent$&lt;/span&gt;&#xa;&lt;van-cell-group&gt;&#xa;&lt;van-cell title=&quot;$title$&quot; value=&quot;$value$&quot;&gt;&lt;/van-cell&gt;&#xa;&lt;/van-cell-group&gt;&#xa;&lt;span slot=&quot;right&quot;&gt;$slotRightContent$&lt;/span&gt;&#xa;&lt;/van-swipe-cell&gt;"
+              description="Vant SwipeCell"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="rightWidth" expression="Width of the right scrollable area"
+                  defaultValue="&quot;65&quot;"
+                  alwaysStopAt="true" />
+        <variable name="leftWidth" expression="Width of the left scrollable area"
+                  defaultValue="&quot;65&quot;"
+                  alwaysStopAt="true" />
+        <variable name="slotLeftContent" expression="content of left scrollable area"
+                  defaultValue="&quot;Select&quot;"
+                  alwaysStopAt="true" />
+        <variable name="slotRightContent" expression="content of right scrollable area"
+                  defaultValue="&quot;Delete&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Cell&quot;"
+                  alwaysStopAt="true" />
+        <variable name="value" expression="Right text"
+                  defaultValue="&quot;Cell Content&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onClose" expression="Callback function before close"
+                  defaultValue="&quot;onClose&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-switch-cell"
+              value="&lt;van-cell-group&gt;&#xa;&lt;van-switch-cell v-model=&quot;$vModel$&quot; title=&quot;$title$&quot; :loading=&quot;$loading$&quot; :disabled=&quot;$disabled$&quot;&gt;&lt;/van-switch-cell&gt;&#xa;&lt;/van-cell-group&gt;"
+              description="Vant SwitchCell component is an encapsulation of Switch and Cell."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="on-off state of the switch"
+                  defaultValue="&quot;checked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="the left side title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="loading" expression="whether switch is loading"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <variable name="disabled" expression="whether to disable switch"
+                  defaultValue="&quot;false&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-tree-select"
+              value="&lt;van-tree-select :items=&quot;$items$&quot; :main-active-index=&quot;$mainActiveIndex$&quot; :active-id=&quot;$activeId$&quot; @navclick=&quot;$onNavClick$&quot; @itemclick=&quot;$onItemClick$&quot;&gt;&lt;/van-tree-select&gt;"
+              description="Vant TreeSelect"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="items" expression="Required datasets for the component, see Data Structure for detail."
+                  defaultValue="&quot;items&quot;"
+                  alwaysStopAt="true" />
+        <variable name="mainActiveIndex" expression="The index of selected parent node"
+                  defaultValue="&quot;mainActiveIndex&quot;"
+                  alwaysStopAt="true" />
+        <variable name="activeId" expression="Id of selected item"
+                  defaultValue="&quot;activeId&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onNavClick" expression="triggered when parent node is selected"
+                  defaultValue="&quot;onNavClick&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onItemClick" expression="triggered when item is selected"
+                  defaultValue="&quot;onItemClick&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-address-edit"
+              value="&lt;van-address-edit :area-list=&quot;$areaList$&quot; show-postal show-delete show-set-default show-search-result :search-result=&quot;$searchResult$&quot; @save=&quot;$onSave$&quot; @delete=&quot;$onDelete$&quot; @change-detail=&quot;$onChangeDetail$&quot;&gt;&lt;/van-address-edit&gt;"
+              description="Vant AddressEdit"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="areaList" expression="Area List"
+                  defaultValue="&quot;areaList&quot;"
+                  alwaysStopAt="true" />
+        <variable name="searchResult" expression="Address search result"
+                  defaultValue="&quot;searchResult&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onSave" expression="Triggered when click save button"
+                  defaultValue="&quot;onSave&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onDelete" expression="Triggered when confirm delete"
+                  defaultValue="&quot;onDelete&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onChangeDetail" expression="Triggered when address detail changed"
+                  defaultValue="&quot;onChangeDetail&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-address-list"
+              value="&lt;van-address-list v-model=&quot;$vModel$&quot; :list=&quot;$list$&quot; :disabled-list=&quot;$disabledList$&quot; disabled-text=&quot;$disabledText$&quot; @add=&quot;$onAdd$&quot; @edit=&quot;$onEdit$&quot;&gt;&lt;/van-address-list&gt;"
+              description="Vant AddressList"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="vModel" expression="Id of chosen address"
+                  defaultValue="&quot;chosenAddressId&quot;"
+                  alwaysStopAt="true" />
+        <variable name="list" expression="Address list"
+                  defaultValue="&quot;list&quot;"
+                  alwaysStopAt="true" />
+        <variable name="disabledList" expression="Disabled address list"
+                  defaultValue="&quot;disabledList&quot;"
+                  alwaysStopAt="true" />
+        <variable name="disabledText" expression="Disabled text"
+                  defaultValue="&quot;The following address is out of range&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onAdd" expression="Triggered when click add button"
+                  defaultValue="&quot;onAdd&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onEdit" expression="Triggered when edit address"
+                  defaultValue="&quot;onEdit&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-area"
+              value="&lt;van-area :area-list=&quot;$areaList$&quot;&gt;&lt;/van-area&gt;"
+              description="The Area component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="areaList" expression="Area data"
+                  defaultValue="&quot;areaList&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-area:initial"
+              value="&lt;van-area :area-list=&quot;$areaList$&quot; value=&quot;$value$&quot;&gt;&lt;/van-area&gt;"
+              description="The Area component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="areaList" expression="Area data"
+                  defaultValue="&quot;areaList&quot;"
+                  alwaysStopAt="true" />
+        <variable name="value" expression="the code of selected area"
+                  defaultValue="&quot;110101&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-area:columns"
+              value="&lt;van-area :area-list=&quot;$areaList$&quot; :columns-num=&quot;$columnsNum$&quot; title=&quot;$title$&quot;&gt;&lt;/van-area&gt;"
+              description="The Area component is usually used with Popup Component."
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="areaList" expression="Area data"
+                  defaultValue="&quot;areaList&quot;"
+                  alwaysStopAt="true" />
+        <variable name="columnsNum" expression="level of picker"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="title" expression="Toolbar title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-card"
+              value="&lt;van-card title=&quot;$title$&quot; desc=&quot;$desc$&quot; num=&quot;$num$&quot; price=&quot;$price$&quot; :thumb=&quot;$thumb$&quot;&gt;&lt;/van-card&gt;"
+              description="Vant Card"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="desc" expression="Description"
+                  defaultValue="&quot;Description&quot;"
+                  alwaysStopAt="true" />
+        <variable name="num" expression="Number of goods"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="price" expression="Price of goods"
+                  defaultValue="&quot;2.00&quot;"
+                  alwaysStopAt="true" />
+        <variable name="thumb" expression="Left thumb"
+                  defaultValue="&quot;imageURL&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-card:advanced"
+              value="&lt;van-card title=&quot;$title$&quot; desc=&quot;$desc$&quot; num=&quot;$num$&quot; price=&quot;$price$&quot; :thumb=&quot;$thumb$&quot;&gt;&#xa;&lt;div slot=&quot;$footer$&quot;&gt;&#xa;&lt;van-button size=&quot;$size1$&quot;&gt;&lt;/van-button&gt;&#xa;&lt;van-button size=&quot;$size2$&quot;&gt;&lt;/van-button&gt;&#xa;&lt;/div&gt;&#xa;&lt;/van-card&gt;"
+              description="Vant Card"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="title" expression="Title"
+                  defaultValue="&quot;Title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="desc" expression="Description"
+                  defaultValue="&quot;Description&quot;"
+                  alwaysStopAt="true" />
+        <variable name="num" expression="Number of goods"
+                  defaultValue="&quot;2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="price" expression="Price of goods"
+                  defaultValue="&quot;2.00&quot;"
+                  alwaysStopAt="true" />
+        <variable name="thumb" expression="Left thumb"
+                  defaultValue="&quot;imageURL&quot;"
+                  alwaysStopAt="true" />
+        <variable name="footer" expression="Custom footer"
+                  defaultValue="&quot;footer&quot;"
+                  alwaysStopAt="true" />
+        <variable name="size1" expression="Can be set to normal, large, small or mini"
+                  defaultValue="&quot;mini&quot;"
+                  alwaysStopAt="true" />
+        <variable name="size2" expression="Can be set to normal, large, small or mini"
+                  defaultValue="&quot;mini&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-contact"
+              value="&lt;van-contact-card :type=&quot;$type$&quot; :name=&quot;$name$&quot; :tel=&quot;$tel$&quot; @click=&quot;$click$&quot;&gt;&lt;/van-contact-card&gt;&#xa;&lt;van-popup v-model=&quot;$showList$&quot; position=&quot;bottom&quot;&gt;&#xa;&lt;van-contact-list v-model=&quot;$vModel$&quot; :list=&quot;$list$&quot; @add=&quot;$onAdd$&quot; @edit=&quot;$onEdit$&quot; @select=&quot;$onSelect$&quot;&gt;&lt;/van-contact-list&gt;&#xa;&lt;/van-popup&gt;&#xa;&lt;van-popup v-model=&quot;$showEdit$&quot; position=&quot;bottom&quot;&gt;&#xa;&lt;van-contact-edit :contact-info=&quot;$editingContact$&quot; :is-edit=&quot;$isEdit$&quot; @save=&quot;$onSave$&quot; @delete=&quot;$onDelete$&quot;&gt;&lt;/van-contact-edit&gt;&#xa;&lt;/van-popup&gt;"
+              description="Vant Contact"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="type" expression="Can be set to add or edit"
+                  defaultValue="&quot;cardType&quot;"
+                  alwaysStopAt="true" />
+        <variable name="name" expression="Name"
+                  defaultValue="&quot;currentContact.name&quot;"
+                  alwaysStopAt="true" />
+        <variable name="tel" expression="Phone"
+                  defaultValue="&quot;currentContact.tel&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click" expression="Triggered when click"
+                  defaultValue="&quot;showList = true&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vModel" expression="Id of chosen contact"
+                  defaultValue="&quot;chosenContactId&quot;"
+                  alwaysStopAt="true" />
+        <variable name="list" expression="Contact list"
+                  defaultValue="&quot;list&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onAdd" expression="Triggered when click add button"
+                  defaultValue="&quot;onAdd&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onEdit" expression="Triggered when click edit button"
+                  defaultValue="&quot;onEdit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onSelect" expression="Triggered when select contact"
+                  defaultValue="&quot;onSelect&quot;"
+                  alwaysStopAt="true" />
+        <variable name="showList" expression="Whether to show popup"
+                  defaultValue="&quot;showList&quot;"
+                  alwaysStopAt="true" />
+        <variable name="showEdit" expression="Whether to show popup"
+                  defaultValue="&quot;showEdit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="editingContact" expression="Contact Info"
+                  defaultValue="&quot;editingContact&quot;"
+                  alwaysStopAt="true" />
+        <variable name="isEdit" expression="Whether is editing"
+                  defaultValue="&quot;isEdit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onSave" expression="Triggered when click save button"
+                  defaultValue="&quot;onSave&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onDelete" expression="Triggered when click delete button"
+                  defaultValue="&quot;onDelete&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-coupon"
+              value="&lt;van-coupon-cell :coupons=&quot;$coupons$&quot; :chosen-coupon=&quot;$chosenCoupon$&quot; @click=&quot;$click$&quot;&gt;&lt;/van-coupon-cell&gt;&#xa;&lt;van-popup v-model=&quot;$vModel$&quot; position=&quot;bottom&quot;&gt;&#xa;&lt;van-coupon-list :coupons=&quot;$coupons$&quot; :chosen-coupon=&quot;$chosenCoupon$&quot; :disabled-coupons=&quot;$disabledCoupons$&quot; @change=&quot;$onChange$&quot; @exchange=&quot;$onExchange$&quot;&gt;&lt;/van-coupon-list&gt;&#xa;&lt;/van-popup&gt;"
+              description="Vant Coupon"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="coupons" expression="Coupon list"
+                  defaultValue="&quot;coupons&quot;"
+                  alwaysStopAt="true" />
+        <variable name="chosenCoupon" expression="Index of chosen coupon"
+                  defaultValue="&quot;chosenCoupon&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click" expression="Trigger click"
+                  defaultValue="&quot;showList = true&quot;"
+                  alwaysStopAt="true" />
+        <variable name="disabledCoupons" expression="Disabled voupon list"
+                  defaultValue="&quot;disabledCoupons&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onChange" expression="Triggered when change chosen coupon"
+                  defaultValue="&quot;onChange&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onExchange" expression="Triggered when exchange coupon"
+                  defaultValue="&quot;onExchange&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vModel" expression="Whether to show popup"
+                  defaultValue="&quot;showList&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-goods-action"
+              value="&lt;van-goods-action&gt;&#xa;&lt;van-goods-action-mini-btn icon=&quot;$icon1$&quot; text=&quot;$text1$&quot; @click=&quot;$click1$&quot;&gt;&lt;/van-goods-action-mini-btn&gt;&#xa;&lt;van-goods-action-mini-btn icon=&quot;$icon2$&quot; text=&quot;$text2$&quot; @click=&quot;$click2$&quot;&gt;&lt;/van-goods-action-mini-btn&gt;&#xa;&lt;van-goods-action-big-btn text=&quot;$text3$&quot; @click=&quot;$click3$&quot;&gt;&lt;/van-goods-action-big-btn&gt;&#xa;&lt;van-goods-action-big-btn text=&quot;$text4$&quot; @click=&quot;$click4$&quot; primary &gt;&lt;/van-goods-action-big-btn&gt;&#xa;&lt;/van-goods-action&gt;"
+              description="Vant GoodsAction"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="icon1" expression="Icon"
+                  defaultValue="&quot;chat&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text1" expression="Button text"
+                  defaultValue="&quot;Icon1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click1" expression="Triggered when click button"
+                  defaultValue="&quot;onClickMiniBtn&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon2" expression="Icon"
+                  defaultValue="&quot;cart&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text2" expression="Button text"
+                  defaultValue="&quot;Icon2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click2" expression="Triggered when click button"
+                  defaultValue="&quot;onClickMiniBtn&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text3" expression="Button text"
+                  defaultValue="&quot;Button1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click3" expression="Triggered when click button"
+                  defaultValue="&quot;onClickBigBtn&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text4" expression="Button text"
+                  defaultValue="&quot;Button2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="click4" expression="Triggered when click button"
+                  defaultValue="&quot;onClickBigBtn&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-goods-action:info"
+              value="&lt;van-goods-action&gt;&#xa;&lt;van-goods-action-mini-btn icon=&quot;$icon1$&quot; text=&quot;$text1$&quot; @click=&quot;$click1$&quot;&gt;&lt;/van-goods-action-mini-btn&gt;&#xa;&lt;van-goods-action-mini-btn icon=&quot;$icon2$&quot; text=&quot;$text2$&quot; info=&quot;$info$&quot;&gt;&lt;/van-goods-action-mini-btn&gt;&#xa;&lt;van-goods-action-mini-btn icon=&quot;$icon3$&quot; text=&quot;$text3$&quot;&gt;&lt;/van-goods-action-mini-btn&gt;&#xa;&lt;van-goods-action-big-btn text=&quot;$text4$&quot;&gt;&lt;/van-goods-action-big-btn&gt;&#xa;&lt;van-goods-action-big-btn text=&quot;$text5$&quot; primary &gt;&lt;/van-goods-action-big-btn&gt;&#xa;&lt;/van-goods-action&gt;"
+              description="Vant GoodsAction"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="icon1" expression="Icon"
+                  defaultValue="&quot;chat&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text1" expression="Button text"
+                  defaultValue="&quot;Icon1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon2" expression="Icon"
+                  defaultValue="&quot;cart&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text2" expression="Button text"
+                  defaultValue="&quot;Icon2&quot;"
+                  alwaysStopAt="true" />
+        <variable name="info" expression="Info message"
+                  defaultValue="&quot;5&quot;"
+                  alwaysStopAt="true" />
+        <variable name="icon3" expression="Icon"
+                  defaultValue="&quot;shop&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text3" expression="Button text"
+                  defaultValue="&quot;Icon3&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text4" expression="Button text"
+                  defaultValue="&quot;Button1&quot;"
+                  alwaysStopAt="true" />
+        <variable name="text5" expression="Triggered when click button"
+                  defaultValue="&quot;Button2&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-submit-bar"
+              value="&lt;van-submit-bar :price=&quot;$price$&quot; button-text=&quot;$buttonText$&quot; @submit=&quot;$submit$&quot;&gt;&lt;/van-submit-bar&gt;"
+              description="Vant SubmitBar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="price" expression="Price"
+                  defaultValue="&quot;3050&quot;"
+                  alwaysStopAt="true" />
+        <variable name="buttonText" expression="Button text"
+                  defaultValue="&quot;Submit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="submit" expression="Triggered when click submit button"
+                  defaultValue="&quot;onSubmit&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-submit-bar:disabled"
+              value="&lt;van-submit-bar disabled :price=&quot;$price$&quot; button-text=&quot;$buttonText$&quot; tip=&quot;$tip$&quot; @submit=&quot;$submit$&quot;&gt;&lt;/van-submit-bar&gt;"
+              description="Vant SubmitBar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="price" expression="Price"
+                  defaultValue="&quot;3050&quot;"
+                  alwaysStopAt="true" />
+        <variable name="buttonText" expression="Button text"
+                  defaultValue="&quot;Submit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="submit" expression="Triggered when click submit button"
+                  defaultValue="&quot;onSubmit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="tip" expression="Tip"
+                  defaultValue="&quot;Some tips&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-submit-bar:loading"
+              value="&lt;van-submit-bar loading :price=&quot;$price$&quot; button-text=&quot;$buttonText$&quot; @submit=&quot;$submit$&quot;&gt;&lt;/van-submit-bar&gt;"
+              description="Vant SubmitBar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="price" expression="Price"
+                  defaultValue="&quot;3050&quot;"
+                  alwaysStopAt="true" />
+        <variable name="buttonText" expression="Button text"
+                  defaultValue="&quot;Submit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="submit" expression="Triggered when click submit button"
+                  defaultValue="&quot;onSubmit&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-submit-bar:advanced"
+              value="&lt;van-submit-bar loading :price=&quot;$price$&quot; button-text=&quot;$buttonText$&quot; @submit=&quot;$submit$&quot;&gt;&#xa;&lt;van-checkbox v-model=&quot;$vModel$&quot;&gt;$checkboxContent$&lt;/van-checkbox&gt;&#xa;&lt;span slot=&quot;$tip$&quot;&gt;&#xa;$spanContent$ &lt;span @click=&quot;$click$&quot;&gt;&lt;/span&gt;&#xa;&lt;/van-submit-bar&gt;&#xa;&lt;/van-submit-bar&gt;"
+              description="Vant SubmitBar"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="price" expression="Price"
+                  defaultValue="&quot;3050&quot;"
+                  alwaysStopAt="true" />
+        <variable name="buttonText" expression="Button text"
+                  defaultValue="&quot;Submit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="submit" expression="Triggered when click submit button"
+                  defaultValue="&quot;onSubmit&quot;"
+                  alwaysStopAt="true" />
+        <variable name="vModel" expression="Check status"
+                  defaultValue="&quot;checked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="checkboxContent" expression="Content of checkbox"
+                  defaultValue="&quot;Check&quot;"
+                  alwaysStopAt="true" />
+        <variable name="tip" expression="Custom tips"
+                  defaultValue="&quot;tip&quot;"
+                  alwaysStopAt="true" />
+        <variable name="spanContent" expression="Content of span"
+                  defaultValue="&quot;Some tips, &quot;"
+                  alwaysStopAt="true" />
+        <variable name="click" expression="Triggered when click span"
+                  defaultValue="&quot;onClickEditAddress&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-sku"
+              value="&lt;van-sku v-model=&quot;$showBase$&quot; :sku=&quot;$sku$&quot; :goods=&quot;$goods$&quot; :goods-id=&quot;$goodsId$&quot; :hide-stock=&quot;$hideStock$&quot; :quota=&quot;$quota$&quot; :quota-used=&quot;$quotaUsed$&quot; :reset-stepper-on-hide=&quot;$resetStepperOnHide$&quot; :reset-selected-sku-on-hide=&quot;$resetSelectedSkuOnHide$&quot; :close-on-click-overlay=&quot;$closeOnClickOverlay$&quot; :disable-stepper-input=&quot;$disableStepperInput$&quot; :message-config=&quot;$messageConfig$&quot; @buy-clicked=&quot;$onBuyClicked$&quot; @add-cart=&quot;$onAddCartClicked$&quot;&gt;&lt;/van-sku&gt;"
+              description="Vant Sku"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="showBase" expression="Whether to show sku"
+                  defaultValue="&quot;showBase&quot;"
+                  alwaysStopAt="true" />
+        <variable name="sku" expression="Sku data"
+                  defaultValue="&quot;sku&quot;"
+                  alwaysStopAt="true" />
+        <variable name="goods" expression="Goods info"
+                  defaultValue="&quot;goods&quot;"
+                  alwaysStopAt="true" />
+        <variable name="goodsId" expression="Goods id"
+                  defaultValue="&quot;goodsId&quot;"
+                  alwaysStopAt="true" />
+        <variable name="hideStock" expression="Whether to hide stock"
+                  defaultValue="&quot;sku.hide_stock&quot;"
+                  alwaysStopAt="true" />
+        <variable name="quota" expression="Quota (0 as no limit)"
+                  defaultValue="&quot;quota&quot;"
+                  alwaysStopAt="true" />
+        <variable name="quotaUsed" expression="Used quota"
+                  defaultValue="&quot;quotaUsed&quot;"
+                  alwaysStopAt="true" />
+        <variable name="resetStepperOnHide" expression="Whether to reset stepper when hide"
+                  defaultValue="&quot;resetStepperOnHide&quot;"
+                  alwaysStopAt="true" />
+        <variable name="resetSelectedSkuOnHide" expression="Whether to reset selected sku when hide"
+                  defaultValue="&quot;resetSelectedSkuOnHide&quot;"
+                  alwaysStopAt="true" />
+        <variable name="closeOnClickOverlay" expression="Whether to close sku popup when click overlay"
+                  defaultValue="&quot;closeOnClickOverlay&quot;"
+                  alwaysStopAt="true" />
+        <variable name="disableStepperInput" expression="Whether to disable stepper input"
+                  defaultValue="&quot;disableStepperInput&quot;"
+                  alwaysStopAt="true" />
+        <variable name="messageConfig" expression="Message related config"
+                  defaultValue="&quot;messageConfig&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onBuyClicked" expression="Triggered when click buy button"
+                  defaultValue="&quot;onBuyClicked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onAddCartClicked" expression="Triggered when click cart button"
+                  defaultValue="&quot;onAddCartClicked&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-sku:custom"
+              value="&lt;van-sku v-model=&quot;$showBase$&quot; :sku=&quot;$sku$&quot; :goods=&quot;$goods$&quot; :goods-id=&quot;$goodsId$&quot; :hide-stock=&quot;$hideStock$&quot; :quota=&quot;$quota$&quot; :quota-used=&quot;$quotaUsed$&quot; :custom-stepper-config=&quot;$customStepperConfig$&quot; @buy-clicked=&quot;$onBuyClicked$&quot; @add-cart=&quot;$onAddCartClicked$&quot;&gt;&lt;/van-sku&gt;"
+              description="Vant Sku"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="showBase" expression="Whether to show sku"
+                  defaultValue="&quot;showBase&quot;"
+                  alwaysStopAt="true" />
+        <variable name="sku" expression="Sku data"
+                  defaultValue="&quot;sku&quot;"
+                  alwaysStopAt="true" />
+        <variable name="goods" expression="Goods info"
+                  defaultValue="&quot;goods&quot;"
+                  alwaysStopAt="true" />
+        <variable name="goodsId" expression="Goods id"
+                  defaultValue="&quot;goodsId&quot;"
+                  alwaysStopAt="true" />
+        <variable name="hideStock" expression="Whether to hide stock"
+                  defaultValue="&quot;sku.hide_stock&quot;"
+                  alwaysStopAt="true" />
+        <variable name="quota" expression="Quota (0 as no limit)"
+                  defaultValue="&quot;quota&quot;"
+                  alwaysStopAt="true" />
+        <variable name="quotaUsed" expression="Used quota"
+                  defaultValue="&quot;quotaUsed&quot;"
+                  alwaysStopAt="true" />
+        <variable name="customStepperConfig" expression="Custom stepper related config"
+                  defaultValue="&quot;customStepperConfig&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onBuyClicked" expression="Triggered when click buy button"
+                  defaultValue="&quot;onBuyClicked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onAddCartClicked" expression="Triggered when click cart button"
+                  defaultValue="&quot;onAddCartClicked&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-sku:advanced"
+              value="&lt;van-sku v-model=&quot;$showCustomAction$&quot; stepper-title=&quot;$stepperTitle$&quot; :sku=&quot;$sku$&quot; :goods=&quot;$goods$&quot; :goods-id=&quot;$goodsId$&quot; :hide-stock=&quot;$hideStock$&quot; :quota=&quot;$quota$&quot; :quota-used=&quot;$quotaUsed$&quot; show-add-cart-btn reset-stepper-on-hide :initial-sku=&quot;$initialSku$&quot; @buy-clicked=&quot;$onBuyClicked$&quot; @add-cart=&quot;$onAddCartClicked$&quot;&gt;&#xa;&lt;template slot=&quot;$slotPrice$&quot; slot-scope=&quot;props&quot;&gt;&#xa;&lt;div class=&quot;van-sku__goods-price&quot;&gt;&#xa;&lt;span class=&quot;van-sku__price-symbol&quot;&gt;$currency$&lt;/span&gt;&lt;span class=&quot;van-sku__price-num&quot;&gt;$price$&lt;/span&gt;&#xa;&lt;/div&gt;&#xa;&lt;/template&gt;&#xa;&lt;template slot=&quot;$slotActions$&quot; slot-scope=&quot;props&quot;&gt;&#xa;&lt;div class=&quot;van-sku-actions&quot;&gt;&#xa;&lt;van-button bottom-action @click=&quot;$onPointClicked$&quot;&gt;$buttonContent$&lt;/van-button&gt;&lt;van-button type=&quot;primary&quot; bottom-action @click=&quot;$clickBuy$&quot;&gt;$buttonContent$&lt;/van-button&gt;&#xa;&lt;/div&gt;&#xa;&lt;/template&gt;&#xa;&lt;/van-sku&gt;"
+              description="Vant Sku"
+              toReformat="true"
+              toShortenFQNames="true">
+        <variable name="showCustomAction" expression="Whether to show sku"
+                  defaultValue="&quot;showCustomAction&quot;"
+                  alwaysStopAt="true" />
+        <variable name="stepperTitle" expression="Quantity title"
+                  defaultValue="&quot;Stepper title&quot;"
+                  alwaysStopAt="true" />
+        <variable name="sku" expression="Sku data"
+                  defaultValue="&quot;sku&quot;"
+                  alwaysStopAt="true" />
+        <variable name="goods" expression="Goods info"
+                  defaultValue="&quot;goods&quot;"
+                  alwaysStopAt="true" />
+        <variable name="goodsId" expression="Goods id"
+                  defaultValue="&quot;goodsId&quot;"
+                  alwaysStopAt="true" />
+        <variable name="hideStock" expression="Whether to hide stock"
+                  defaultValue="&quot;sku.hide_stock&quot;"
+                  alwaysStopAt="true" />
+        <variable name="quota" expression="Quota (0 as no limit)"
+                  defaultValue="&quot;quota&quot;"
+                  alwaysStopAt="true" />
+        <variable name="quotaUsed" expression="Used quota"
+                  defaultValue="&quot;quotaUsed&quot;"
+                  alwaysStopAt="true" />
+        <variable name="initialSku" expression="Default selected sku"
+                  defaultValue="&quot;initialSku&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onBuyClicked" expression="Triggered when click buy button"
+                  defaultValue="&quot;onBuyClicked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onAddCartClicked" expression="Triggered when click cart button"
+                  defaultValue="&quot;onAddCartClicked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="slotPrice" expression="Custom header price area"
+                  defaultValue="&quot;sku-header-price&quot;"
+                  alwaysStopAt="true" />
+        <variable name="currency" expression="price symbol"
+                  defaultValue="&quot;￥&quot;"
+                  alwaysStopAt="true" />
+        <variable name="price" expression="price number"
+                  defaultValue="&quot;{{ props.price }}&quot;"
+                  alwaysStopAt="true" />
+        <variable name="slotActions" expression="Custom button actions"
+                  defaultValue="&quot;sku-header-price&quot;"
+                  alwaysStopAt="true" />
+        <variable name="onPointClicked" expression="Triggered when click custom button"
+                  defaultValue="&quot;onPointClicked&quot;"
+                  alwaysStopAt="true" />
+        <variable name="buttonContent" expression="Button content"
+                  defaultValue="&quot;Button&quot;"
+                  alwaysStopAt="true" />
+        <variable name="clickBuy" expression="Triggered when click custom button"
+                  defaultValue="&quot;props.skuEventBus.$emit('sku:buy')&quot;"
+                  alwaysStopAt="true" />
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-dialog:alert"
+              value="Dialog.alert({&#xa;title: '标题',&#xa;message: '弹窗内容'&#xa;}).then(() => { &#xa;});"
+              description="Vant Dialog alert"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-dialog:confirm"
+              value="Dialog.confirm({&#xa;title: '标题',&#xa;message: '弹窗内容'&#xa;}).then(() => { &#xa;}).catch(() => {&#xa;});"
+              description="Vant Dialog confirm"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-dialog:method-alert"
+              value="this.$dialog.alert({&#xa;message: '弹窗内容'&#xa;});"
+              description="Vant Dialog global alert"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-dialog:method-confirm"
+              value="this.$dialog.confirm({&#xa;title: '标题',&#xa;message: '弹窗内容'&#xa;}).then(() => {&#xa;}).catch(() => {&#xa;});"
+              description="Vant Dialog global confirm"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast"
+              value="Toast('我是提示文案，建议不超过十五字~');"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast:loading"
+              value="Toast.loading({&#xa;mask: true,&#xa;message: '加载中...'&#xa;});"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast:success"
+              value="Toast.success('成功文案');"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast:fail"
+              value="Toast.fail('失败文案');"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast:advanced"
+              value="const toast = Toast.loading({&#xa;duration: 0,&#xa;forbidClick: true,&#xa;loadingType: 'spinner',&#xa;message: '倒计时 3 秒'&#xa;});&#xa;let second = 3;&#xa;const timer = setInterval(() => {&#xa;second--;&#xa;if (second) {&#xa;toast.message = `倒计时 ${second} 秒`;&#xa;} else {&#xa;clearInterval(timer);&#xa;Toast.clear();&#xa;}&#xa;}, 1000);"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast:method"
+              value="this.$dialog.alert({&#xa;message: 'Content'&#xa;});"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-toast:multiple"
+              value="const toast1 = Toast('第一个 Toast');&#xa;const toast2 = Toast.success('第二个 Toast');&#xa;toast1.clear();&#xa;toast2.clear();"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-image-preview"
+              value="ImagePreview([&#xa;'https://img.yzcdn.cn/1.jpg',&#xa;'https://img.yzcdn.cn/2.jpg'&#xa;]);"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-image-preview:config"
+              value="ImagePreview({&#xa;images: [&#xa;'https://img.yzcdn.cn/1.jpg',&#xa;'https://img.yzcdn.cn/2.jpg'&#xa;],&#xa;startPosition: 1,&#xa;onClose() {&#xa;// do something&#xa;}&#xa;});"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+
+    <template name="van-image-preview:close"
+              value="const instance = ImagePreview([&#xa;'https://img.yzcdn.cn/1.jpg',&#xa;'https://img.yzcdn.cn/2.jpg'&#xa;]);&#xa;setTimeout(() => {&#xa;instance.close();&#xa;}, 1000);"
+              description="Vant Toast"
+              toReformat="true"
+              toShortenFQNames="true">
+        <context>
+            <option name="Vue" value="true"/>
+            <option name="OTHER" value="true" />
+        </context>
+    </template>
+</templateSet>

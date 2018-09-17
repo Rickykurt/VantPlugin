@@ -1,0 +1,48 @@
+<idea-plugin>
+  <id>com.rickykurt.plugin.vant</id>
+  <name>Vant Plugin</name>
+  <version>1.0</version>
+  <vendor email="rickykurt@gmail.com" url="https://github.com/Rickykurt/VantPlugin"></vendor>
+
+  <description><![CDATA[
+      support for vant ui framework, before use this plugin, you must install plugin vuejs
+    ]]></description>
+
+  <change-notes><![CDATA[
+
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+
+    <!-- 代码块提示 -->
+    <defaultLiveTemplatesProvider implementation="main.java.com.vant.VantTemplatesProvider"/>
+    <fileTypeFactory implementation="main.java.com.vant.VantFileTypeFactory" />
+    <!--<lang.parserDefinition language="element" implementationClass="com.elementent.language.elementParserDefinition"/>-->
+
+    <!-- 标签文档提示 -->
+    <lang.documentationProvider language="HTML" implementationClass="main.java.com.vant.document.DocumentProvider" order="first"/>
+
+    <!-- 标签自动完成、属性提示 -->
+    <xml.tagNameProvider implementation="main.java.com.vant.xml.VantTagNameProvider"/>
+    <xml.elementDescriptorProvider implementation="main.java.com.vant.xml.VantTagNameProvider" order="first"/>
+    <xml.attributeDescriptorsProvider implementation="main.java.com.vant.xml.VantAttributesProvider" order="first"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
