@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.rickykurt.plugin.vant</id>
   <name>Vant Plugin</name>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <vendor email="rickykurt@gmail.com" url="https://github.com/Rickykurt/VantPlugin"></vendor>
 
   <description><![CDATA[

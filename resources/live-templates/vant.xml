@@ -986,7 +986,7 @@
     </template>
 
     <template name="van-uploader"
-              value="&lt;div class=&quot;uploader-container&quot;&gt;&#xa;&lt;van-uploader :after-read=&quot;$afterRead$&quot;&gt;&#xa;&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;&#xa;&lt;/van-upload&gt;&#xa;&lt;/div&gt;"
+              value="&lt;div class=&quot;uploader-container&quot;&gt;&#xa;&lt;van-uploader :after-read=&quot;$afterRead$&quot;&gt;&#xa;&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;&#xa;&lt;/van-uploader&gt;&#xa;&lt;/div&gt;"
               description="Vant Uploader"
               toReformat="true"
               toShortenFQNames="true">
@@ -1003,7 +1003,7 @@
     </template>
 
     <template name="van-uploader:attr"
-              value="&lt;van-uploader :after-read=&quot;$afterRead$&quot; accept=&quot;$accept$&quot; multiple&gt;&#xa;&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;&#xa;&lt;/van-upload&gt;"
+              value="&lt;van-uploader :after-read=&quot;$afterRead$&quot; accept=&quot;$accept$&quot; multiple&gt;&#xa;&lt;van-icon name=&quot;$name$&quot;&gt;&lt;/van-icon&gt;&#xa;&lt;/van-uploader&gt;"
               description="Vant Uploader"
               toReformat="true"
               toShortenFQNames="true">

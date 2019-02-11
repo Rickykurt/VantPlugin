@@ -18,7 +18,7 @@ public class VantAttributesProvider implements XmlAttributeDescriptorsProvider {
     @Override
     public XmlAttributeDescriptor[] getAttributeDescriptors(XmlTag xmlTag) {
         final Project project = xmlTag.getProject();
-        for (Map.Entry<String, HashMap<String, String[]>> next : VantTagConstant.TAG_CONSTANT.entrySet()) {
+        for (Map.Entry<String, HashMap<String, String[]>> next : VantTagConstant.INSTANCE.getTAG_CONSTANT().entrySet()) {
             if (next.getKey().equals(xmlTag.getName())) {
                 HashMap<String, String[]> attrMap = next.getValue();
                 XmlAttributeDescriptor[] attributeDescriptors = new VantAttributeDescriptor[attrMap.size()];
