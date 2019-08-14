@@ -45,6 +45,5 @@ class DocumentProvider : AbstractDocumentationProvider() {
         } else {
             doc
         }
-        return null
     }
 }
