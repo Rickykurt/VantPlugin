@@ -9,7 +9,10 @@
     ]]></description>
 
   <change-notes><![CDATA[
-    1.0.1: fix vant-uploader end tag from `vant-upload` to `vant-uploader`
+    <ul>
+      <li>1.0.1: fix vant-uploader end tag from `vant-upload` to `vant-uploader`</li>
+      <li>1.0.2: fix unknown html tag</li>
+    </ul>
     ]]>
   </change-notes>
 
@@ -31,8 +34,6 @@
     <!-- 代码块提示 -->
     <defaultLiveTemplatesProvider implementation="main.java.com.vant.VantTemplatesProvider"/>
     <fileType name="vant file" implementationClass="main.java.com.vant.VantFileType" />
-    <!--<lang.parserDefinition language="element" implementationClass="com.elementent.language.elementParserDefinition"/>-->
-
     <!-- 标签文档提示 -->
     <lang.documentationProvider language="HTML" implementationClass="main.java.com.vant.document.DocumentProvider" order="first"/>
 
