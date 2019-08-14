@@ -26,26 +26,24 @@ class DocumentProvider : AbstractDocumentationProvider() {
     override fun generateDoc(element: PsiElement?, originalElement: PsiElement?): String? {
         // 相关处理，不处理返回null
         val text = (originalElement!!.context as HtmlTagImpl).name
-        if (null != text) {
-            var doc = "doc: $text"
-            val textHandle = text.replace("-".toRegex(), "").replace("\n|\r\n".toRegex(), "")
-            val fields = DocumentConstant::class.declaredMemberProperties
-            for (field in fields) {
-                if (textHandle == field.name) {
-                    try {
-                        doc = field.get(DocumentConstant).toString()
-                    } catch (e: IllegalAccessException) {
-                        e.printStackTrace()
-                    }
-
-                    break
+        var doc = "doc: $text"
+        val textHandle = text.replace("-".toRegex(), "").replace("\n|\r\n".toRegex(), "")
+        val fields = DocumentConstant::class.declaredMemberProperties
+        for (field in fields) {
+            if (textHandle == field.name) {
+                try {
+                    doc = field.get(DocumentConstant).toString()
+                } catch (e: IllegalAccessException) {
+                    e.printStackTrace()
                 }
+
+                break
             }
-            return if ("doc: " == doc) {
-                null
-            } else {
-                doc
-            }
+        }
+        return if ("doc: " == doc) {
+            null
+        } else {
+            doc
         }
         return null
     }
