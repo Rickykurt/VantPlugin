@@ -4,7 +4,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.meta.PsiPresentableMetaData;
 import com.intellij.psi.xml.XmlElement;
-import com.intellij.util.ArrayUtil;
 import com.intellij.xml.impl.BasicXmlAttributeDescriptor;
 import com.intellij.xml.impl.XmlAttributeDescriptorEx;
 import main.java.com.vant.VantIcons;
@@ -14,10 +13,13 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
+/**
+ * @author Ricky
+ */
 public class VantAttributeDescriptor extends BasicXmlAttributeDescriptor implements XmlAttributeDescriptorEx, PsiPresentableMetaData {
     protected final Project project;
     private final String attributeName;
-    private String[] attributeValues = null;
+    private String[] attributeValues;
 
     public VantAttributeDescriptor(final Project project, String attributeName, String[] attributeValues) {
         this.project = project;
@@ -41,12 +43,7 @@ public class VantAttributeDescriptor extends BasicXmlAttributeDescriptor impleme
     }
 
     @Override
-    public void init(PsiElement element) {}
-
-    @NotNull
-    @Override
-    public Object[] getDependences() {
-        return ArrayUtil.EMPTY_OBJECT_ARRAY;
+    public void init(PsiElement element) {
     }
 
     @Override

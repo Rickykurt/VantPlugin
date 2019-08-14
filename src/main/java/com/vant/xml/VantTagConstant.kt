@@ -1,6 +1,6 @@
 package main.java.com.vant.xml
 
-import java.util.HashMap
+import java.util.*
 
 object VantTagConstant {
     var TAG_CONSTANT = HashMap<String, HashMap<String, Array<String>>>()

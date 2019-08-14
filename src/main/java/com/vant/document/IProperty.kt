@@ -4,8 +4,6 @@ import com.intellij.openapi.actionSystem.DataKey
 import com.intellij.openapi.util.Iconable
 import com.intellij.pom.Navigatable
 import com.intellij.psi.PsiElement
-import com.intellij.util.IncorrectOperationException
-import org.jetbrains.annotations.NonNls
 
 interface IProperty : Navigatable, Iconable {
 

@@ -6,6 +6,9 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 
+/**
+ * @author Ricky
+ */
 public class VantFileType extends LanguageFileType {
     public static final VantFileType INSTANCE = new VantFileType();
 
@@ -16,13 +19,13 @@ public class VantFileType extends LanguageFileType {
     @NotNull
     @Override
     public String getName() {
-        return "Shen file1";
+        return "vant file";
     }
 
     @NotNull
     @Override
     public String getDescription() {
-        return "Shen language file1";
+        return "vant file";
     }
 
     @NotNull

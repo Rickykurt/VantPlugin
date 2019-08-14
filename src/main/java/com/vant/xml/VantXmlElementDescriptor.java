@@ -1,29 +1,33 @@
 package main.java.com.vant.xml;
 
-import com.intellij.openapi.util.Condition;
 import com.intellij.psi.PsiElement;
+import com.intellij.psi.PsiFile;
 import com.intellij.psi.impl.source.html.dtd.HtmlNSDescriptorImpl;
 import com.intellij.psi.impl.source.xml.XmlDocumentImpl;
 import com.intellij.psi.util.PsiTreeUtil;
 import com.intellij.psi.xml.XmlAttribute;
 import com.intellij.psi.xml.XmlTag;
-import com.intellij.util.ArrayUtil;
 import com.intellij.util.containers.ContainerUtil;
 import com.intellij.xml.XmlAttributeDescriptor;
 import com.intellij.xml.XmlElementDescriptor;
 import com.intellij.xml.XmlElementsGroup;
 import com.intellij.xml.XmlNSDescriptor;
-import com.intellij.xml.impl.schema.AnyXmlElementDescriptor;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.Nullable;
 
-public class VantAnyXmlElementDescriptor extends AnyXmlElementDescriptor implements XmlElementDescriptor {
+/**
+ * @author Ricky
+ */
+public class VantXmlElementDescriptor implements XmlElementDescriptor {
 
     private final String name;
+    private final PsiFile file;
 
-    public VantAnyXmlElementDescriptor(XmlElementDescriptor xmlElementDescriptor, XmlNSDescriptor xmlNSDescriptor, String name) {
-        super(xmlElementDescriptor, xmlNSDescriptor);
+    public VantXmlElementDescriptor(
+            String name, PsiFile file
+    ) {
         this.name = name;
+        this.file = file;
     }
 
     @Override
@@ -69,16 +73,7 @@ public class VantAnyXmlElementDescriptor extends AnyXmlElementDescriptor impleme
     @Nullable
     @Override
     public XmlAttributeDescriptor getAttributeDescriptor(@NonNls final String attributeName, @Nullable XmlTag context) {
-        final XmlAttributeDescriptor descriptor = ContainerUtil.find(getAttributesDescriptors(context), new Condition<XmlAttributeDescriptor>() {
-            @Override
-            public boolean value(XmlAttributeDescriptor descriptor) {
-                return attributeName.equals(descriptor.getName());
-            }
-        });
-        if (descriptor != null) {
-            return descriptor;
-        }
-        return null;
+        return ContainerUtil.find(getAttributesDescriptors(context), descriptor -> attributeName.equals(descriptor.getName()));
     }
 
     @Override
@@ -104,8 +99,8 @@ public class VantAnyXmlElementDescriptor extends AnyXmlElementDescriptor impleme
     }
 
     @Override
-    public PsiElement getDeclaration() {
-        return null;
+    public PsiFile getDeclaration() {
+        return file;
     }
 
     @Override
@@ -120,11 +115,5 @@ public class VantAnyXmlElementDescriptor extends AnyXmlElementDescriptor impleme
 
     @Override
     public void init(PsiElement element) {
-
-    }
-
-    @Override
-    public Object[] getDependences() {
-        return ArrayUtil.EMPTY_OBJECT_ARRAY;
     }
 }

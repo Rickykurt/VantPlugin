@@ -12,6 +12,7 @@ import java.util.Map;
 public class VantAttributesProvider implements XmlAttributeDescriptorsProvider {
     /**
      * 给特定标签添加属性
+     *
      * @param xmlTag
      * @return
      */
@@ -23,7 +24,7 @@ public class VantAttributesProvider implements XmlAttributeDescriptorsProvider {
                 HashMap<String, String[]> attrMap = next.getValue();
                 XmlAttributeDescriptor[] attributeDescriptors = new VantAttributeDescriptor[attrMap.size()];
                 int i = 0;
-                for(Map.Entry<String, String[]> attr : attrMap.entrySet()){
+                for (Map.Entry<String, String[]> attr : attrMap.entrySet()) {
                     attributeDescriptors[i] = new VantAttributeDescriptor(project, attr.getKey(), attr.getValue());
                     i++;
                 }

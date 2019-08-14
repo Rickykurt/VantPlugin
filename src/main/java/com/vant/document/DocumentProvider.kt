@@ -3,9 +3,8 @@ package main.java.com.vant.document
 import com.intellij.lang.documentation.AbstractDocumentationProvider
 import com.intellij.openapi.util.text.StringUtil
 import com.intellij.psi.PsiElement
-import com.intellij.psi.PsiFile
-
-import java.lang.reflect.Field
+import com.intellij.psi.impl.source.html.HtmlTagImpl
+import kotlin.reflect.full.declaredMemberProperties
 
 class DocumentProvider : AbstractDocumentationProvider() {
     override fun getQuickNavigateInfo(element: PsiElement?, originalElement: PsiElement?): String? {
@@ -21,23 +20,20 @@ class DocumentProvider : AbstractDocumentationProvider() {
 
     private fun renderPropertyValue(prop: IProperty): String {
         val raw = prop.value ?: return "<i>empty</i>"
-        return StringUtil.escapeXml(raw)
+        return StringUtil.escapeXmlEntities(raw)
     }
 
     override fun generateDoc(element: PsiElement?, originalElement: PsiElement?): String? {
         // 相关处理，不处理返回null
-        val text = originalElement!!.text
-
+        val text = (originalElement!!.context as HtmlTagImpl).name
         if (null != text) {
-            println(text)
             var doc = "doc: $text"
             val textHandle = text.replace("-".toRegex(), "").replace("\n|\r\n".toRegex(), "")
-            val clazz = DocumentConstant::class.java
-            val fields = clazz.fields
+            val fields = DocumentConstant::class.declaredMemberProperties
             for (field in fields) {
-                if (textHandle == field.name && field.type.toString().endsWith("java.lang.String")) {
+                if (textHandle == field.name) {
                     try {
-                        doc = field.get(DocumentConstant::class.java) as String
+                        doc = field.get(DocumentConstant).toString()
                     } catch (e: IllegalAccessException) {
                         e.printStackTrace()
                     }

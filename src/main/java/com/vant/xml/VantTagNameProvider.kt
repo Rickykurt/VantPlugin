@@ -6,10 +6,8 @@ import com.intellij.codeInsight.lookup.LookupElementBuilder
 import com.intellij.psi.impl.source.xml.XmlElementDescriptorProvider
 import com.intellij.psi.xml.XmlTag
 import com.intellij.xml.XmlElementDescriptor
-import com.intellij.xml.XmlNSDescriptor
 import com.intellij.xml.XmlTagNameProvider
 
-import java.util.HashMap
 
 class VantTagNameProvider : XmlElementDescriptorProvider, XmlTagNameProvider {
     /**
@@ -33,9 +31,7 @@ class VantTagNameProvider : XmlElementDescriptorProvider, XmlTagNameProvider {
      * @return
      */
     override fun getDescriptor(xmlTag: XmlTag): XmlElementDescriptor? {
-        val nsDescriptor = xmlTag.getNSDescriptor(xmlTag.namespace, false)
-        val descriptor = nsDescriptor?.getElementDescriptor(xmlTag)
-        // 判断是否包含在特定处理标签内
+
         var special = false
         for ((key) in VantTagConstant.TAG_CONSTANT) {
             if (key == xmlTag.name) {
@@ -43,9 +39,56 @@ class VantTagNameProvider : XmlElementDescriptorProvider, XmlTagNameProvider {
                 break
             }
         }
-        return if (!special) {
-            null
-        } else VantAnyXmlElementDescriptor(descriptor, nsDescriptor, xmlTag.name)
+        if (special) {
+//            var declare: PsiFile? = null
+//            val virtualFile = ArchiveUtil.getFileFromArchive("constants/weex-built-in-components.xml")
+//            if (virtualFile != null) {
+//                declare = PsiManager.getInstance(xmlTag.project).findFile(virtualFile!!)
+//            }
+//            if (declare == null) {
+//
+//            }
+            var declare = xmlTag.containingFile
+            return VantXmlElementDescriptor(xmlTag.name, declare)
+        }
+        return null
+//        val tags = DirectiveLint.getWeexTagNames()
+//        val htmlTags = DirectiveLint.getHtmlTags()
+//        if (tags.contains(xmlTag.name) && !htmlTags.contains(xmlTag.name)) {
+//
+//            val tag = DirectiveLint.getWeexTag(xmlTag.name)
+//            if (tag != null) {
+//                declare = tag!!.declare
+//            }
+//            if (declare == null) {
+//
+//
+//            }
+//
+//
+//        }
+//
+//        val contextTags = ContextTagResolver.resolve(xmlTag)
+//        for (tag in contextTags) {
+//            if (xmlTag.name.equals(tag.tag)) {
+//                return WeexTagDescriptor(tag.tag, tag.declare)
+//            }
+//        }
+//
+//
+//
+//
+//
+//
+//
+//
+//        val nsDescriptor = xmlTag.getNSDescriptor(xmlTag.namespace, false)
+//        val descriptor = nsDescriptor?.getElementDescriptor(xmlTag)
+//        // 判断是否包含在特定处理标签内
+//
+//        return if (!special) {
+//            null
+//        } else VantXmlElementDescriptor(descriptor, nsDescriptor, xmlTag.name)
 
     }
 }

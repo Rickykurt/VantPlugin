@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>com.rickykurt.plugin.vant</id>
   <name>Vant Plugin</name>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <vendor email="rickykurt@gmail.com" url="https://github.com/Rickykurt/VantPlugin"></vendor>
 
   <description><![CDATA[
@@ -9,7 +9,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
-
+    1.0.1: fix vant-uploader end tag from `vant-upload` to `vant-uploader`
     ]]>
   </change-notes>
 
@@ -21,6 +21,7 @@
   <!-- uncomment to enable plugin in all products
   <depends>com.intellij.modules.lang</depends>
   -->
+  <depends>com.intellij.modules.xml</depends>
   <depends>com.intellij.modules.lang</depends>
   <depends>com.intellij.modules.platform</depends>
 
@@ -29,7 +30,7 @@
 
     <!-- 代码块提示 -->
     <defaultLiveTemplatesProvider implementation="main.java.com.vant.VantTemplatesProvider"/>
-    <fileTypeFactory implementation="main.java.com.vant.VantFileTypeFactory" />
+    <fileType name="vant file" implementationClass="main.java.com.vant.VantFileType" />
     <!--<lang.parserDefinition language="element" implementationClass="com.elementent.language.elementParserDefinition"/>-->
 
     <!-- 标签文档提示 -->
@@ -39,6 +40,7 @@
     <xml.tagNameProvider implementation="main.java.com.vant.xml.VantTagNameProvider"/>
     <xml.elementDescriptorProvider implementation="main.java.com.vant.xml.VantTagNameProvider" order="first"/>
     <xml.attributeDescriptorsProvider implementation="main.java.com.vant.xml.VantAttributesProvider" order="first"/>
+
   </extensions>
 
   <actions>
